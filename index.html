@@ -1,0 +1,34 @@
+<!DOCHTML html>
+<html>
+ <head>
+  <title>Peso en distintos planetas</title>
+ </head>
+ <body>
+  <H1 align="center">�Quieres saber cuanto pesas en otro planeta?</H1>
+  <p align="left">Elije en que planeta quieres saber cuanto pesas</p>
+     <script>
+	var Gperson= parseFloat(prompt("�Cual es tu peso?"));
+	var Gmart=3.7;
+	var Gearth=9.8;
+	var Gjupiter=24.8;
+	var planet=parseInt(prompt("Elije el planeta\n 1 es marte, 2 es jupiter"));
+	
+	if(planet==1)
+	{
+	planet_elec="marte";
+	planet=Gmart*Gperson/Gearth;
+	}
+	else if(planet==2)
+	{
+	planet_elec="jupiter";
+	planet=Gjupiter*Gperson/Gearth;
+	}
+	else
+	{
+	planet_elec="kripton";
+	planet=1000000;
+	}
+	document.write("Pesas en "+ planet_elec+" "+ planet.toFixed(2) +" Kg")
+     </script>
+ </body>
+</html>
